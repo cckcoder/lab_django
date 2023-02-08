@@ -5,5 +5,15 @@
 {% endblock %}
 
 {% block content %}
+
 <h1>Haloo HOME</h1>
+{% for post in posts %}
+<ul>
+  <li>{{ post.title }}</li>
+  <li>{{ post.post }}</li>
+  <li>{{ post.date_created|date:"M d Y" }}</li>
+  <li>{{ post.date_updated }}</li>
+</ul>
+{% endfor %}
+
 {% endblock %}
